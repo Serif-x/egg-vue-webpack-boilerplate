@@ -14,12 +14,12 @@
 
 - Egg + TypeScript 已初步支持， 包括 Node 端 typescript 编写 和 前端 TypeScript编写, 具体请见(https://github.com/hubcarl/egg-vue-typescript-boilerplate)项目
 - 项目开发之前, 请阅读
-    [Egg + Vue 服务端渲染开发指南](https://zhuanlan.zhihu.com/p/30445536) 
-    [Egg + Vue 服务端渲染工程化实现](https://zhuanlan.zhihu.com/p/29838551)
+   - [Egg + Vue 服务端渲染开发指南](https://zhuanlan.zhihu.com/p/30445536)   
+   - [Egg + Vue 服务端渲染工程化实现](https://zhuanlan.zhihu.com/p/29838551)  
 - 如果你需要了解 Egg+Vue+Webpack 项目更多信息，查看原始分支
-- 基于原始骨架，进行了部分自定义配置和环境搭建
+  ![egg-vue-webpack-boilerplate](https://github.com/hubcarl/egg-vue-webpack-boilerplate)
 
-![egg-vue-webpack-boilerplate](https://github.com/hubcarl/egg-vue-webpack-boilerplate)
+- 基于原始骨架，进行了部分自定义配置和环境搭建
 
 ## 文档
 
@@ -95,9 +95,6 @@ npm run dev
 ```
 
 应用访问: http://127.0.0.1:7001
-
-![npm start启动](https://github.com/hubcarl/egg-vue-webpack-boilerplate/blob/master/docs/images/webpack-build.png)
-
 
 #### 3.4 发布模式启动应用
 
