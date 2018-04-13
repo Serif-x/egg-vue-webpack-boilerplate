@@ -1,7 +1,7 @@
 const Controller = require('../core/base-controller');
 const Model = require('../mocks/article/list');
 
-class HomeController extends Controller {
+module.exports = class HomeController extends Controller {
 
   async index () {
     const { ctx } = this;
@@ -19,7 +19,4 @@ class HomeController extends Controller {
     const pageSize = ctx.query.pageSize;
     ctx.body = Model.getPage(pageIndex, pageSize);
   }
-
-}
-
-module.exports = HomeController;
+};

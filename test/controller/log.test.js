@@ -1,6 +1,6 @@
-const { app, mock, assert } = require('egg-mock/bootstrap');
+const { app, assert, mock } = require('egg-mock/bootstrap');
 
-describe('test/controller/log.test.js', () => {
+describe('controller/log', () => {
   it('Should log params name', async () => {
     await app.httpRequest()
       .get('/log?name=serifx')

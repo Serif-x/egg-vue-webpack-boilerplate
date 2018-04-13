@@ -1,6 +1,6 @@
 const Controller = require('../core/base-controller');
 
-class LogController extends Controller {
+module.exports = class LogController extends Controller {
   async index () {
     const { ctx } = this;
     const query = ctx.query;
@@ -13,6 +13,4 @@ class LogController extends Controller {
     }
     this.rest(query);
   }
-}
-
-module.exports = LogController;
+};

@@ -1,6 +1,6 @@
 const { Controller } = require('egg');
 
-class BaseController extends Controller {
+module.exports = class BaseController extends Controller {
   get user () {
     return this.ctx.session.user;
   }
@@ -19,6 +19,4 @@ class BaseController extends Controller {
     msg = msg || 'not found';
     this.ctx.throw(404, msg);
   }
-}
-
-module.exports = BaseController;
+};

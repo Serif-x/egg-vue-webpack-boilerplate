@@ -1,11 +1,11 @@
-const cache = {};
+const memoryCache = {};
 
 module.exports = {
   getFoo (key) {
     // const app = this;
-    if (!cache.hasOwnProperty(key)) {
-      cache[key] = 1 + 2;
+    if (!memoryCache.hasOwnProperty(key)) {
+      memoryCache[key] = 1 + 2;
     }
-    return cache[key];
+    return memoryCache[key];
   }
 };
