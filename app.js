@@ -39,8 +39,8 @@ module.exports = app => {
   });
 
   // Refresh cache
-  app.messenger.on('refresh', (by) => {
-    app.logger.info('start update by %s', by);
+  app.messenger.on('refresh_cache', (by) => {
+    app.logger.info('Start refresh cache by %s', by);
     // create an anonymous context to access service
     const ctx = app.createAnonymousContext();
     ctx.runInBackground(async () => {

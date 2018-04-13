@@ -16,7 +16,7 @@ module.exports = class SourceService extends Service {
   async update () {
     // update memory cache from remote
     memoryCache = await fetch();
-    this.ctx.logger.info('Update memory cache from remote: %j', memoryCache);
+    this.ctx.logger.info('Update cache from remote: %j', memoryCache);
   }
 };
 
@@ -32,7 +32,7 @@ function fetch () {
 function check () {
   return new Promise((resolve) => {
     setTimeout(() => {
-      return resolve(true);
+      return resolve(false);
     }, 1e3);
   });
 }
