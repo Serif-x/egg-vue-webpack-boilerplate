@@ -7,7 +7,7 @@ module.exports = class ForceRefresh extends Subscription {
       // cron: '0 0 */3 * * *', // 每三小时准点执行一次
       type: 'all', // run in all workers
       immediate: false,
-      disable: false
+      disable: true
     };
   }
 

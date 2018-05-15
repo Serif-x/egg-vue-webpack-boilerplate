@@ -1,5 +1,5 @@
 module.exports = app => {
-  app.get('/', app.controller.home.index);
-  app.get('/client', app.controller.home.client);
-  app.get('/pager', app.controller.home.pager);
+  app.router.get('/', app.controller.home.index);
+  app.router.get('/client', app.controller.home.client);
+  app.router.get('/pager', app.controller.home.pager);
 };

@@ -1,3 +1,3 @@
 module.exports = app => {
-  app.get('/log', app.controller.log.index);
+  app.router.get('/log', app.controller.log.index);
 };

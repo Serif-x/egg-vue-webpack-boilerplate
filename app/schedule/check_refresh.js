@@ -6,7 +6,7 @@ module.exports = class ForceRefresh extends Subscription {
       interval: '10s',
       type: 'worker', // run in on worker
       immediate: false,
-      disable: false
+      disable: true
     };
   }
 

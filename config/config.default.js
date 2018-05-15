@@ -45,6 +45,12 @@ module.exports = app => {
   exports.security = {
     domainWhiteList: []
   };
+
+  exports.cors = {
+    enable: true,
+    credentials: false,
+    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH,OPTIONS'
+  };
   /* endregion Security */
 
   /* region Web */
@@ -70,20 +76,23 @@ module.exports = app => {
   exports.onerror = {
     errorPageUrl: path.join(app.baseDir, '/500.html'),
 
-    all (err, ctx) {
+    all(err, ctx) {
       // 在此处定义针对所有响应类型的错误处理方法
       // 注意，定义了 config.all 之后，其他错误处理方法不会再生效
       ctx.body = 'oops, something unexpected happened';
       ctx.status = 500;
+      console.error(err);
     },
-    html (err, ctx) {
+    html(err, ctx) {
       // html handler
       ctx.body = '<h3>oops, something unexpected happened</h3>';
       ctx.status = 500;
     },
-    json (err, ctx) {
+    json(err, ctx) {
       // json handler
-      ctx.body = { msg: 'error' };
+      ctx.body = {
+        msg: 'error'
+      };
       ctx.status = 500;
     },
     // jsonp (err, ctx) {

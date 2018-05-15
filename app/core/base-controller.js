@@ -13,6 +13,7 @@ module.exports = class BaseController extends Controller {
       msg
     };
     ctx.set('Content-type', 'application/json; charset=utf-8');
+    ctx.set('Access-Control-Allow-Origin', '*');
   }
 
   notFound (msg) {
